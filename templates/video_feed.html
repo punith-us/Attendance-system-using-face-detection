@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Feed</title>
+    
+    <!-- Custom CSS for button styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Video Feed</h1>
+        
+        <div class="video-container">
+            <video id="videoPlayer" autoplay playsinline></video>
+        </div>
+
+        <!-- Back button to go to monitor page -->
+        <a href="{{ url_for('back_to_monitor') }}" class="btn btn-primary">Back to Monitor</a>
+
+        <!-- JavaScript to start video feed -->
+        <script>
+            var videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.src = "{{ url_for('video_feed_src') }}";
+        </script>
+    </div>
+</body>
+</html>

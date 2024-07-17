@@ -1,0 +1,32 @@
+Requirements:
+numpy==1.24.0
+face_recognition
+pandas
+pickle
+opencv-python
+
+Dataset:
+In the existing dataset folder create a new folder(name folder with person's name) for every person and add the images of that person inside the folder created for him/her. 
+Images need to be in jpg/jpeg/png formats only.
+
+Execution:
+Make sure the environment is active and execution is taking place within. 
+Step 1: Add the dataset photos as mentioned earlier
+Step 2: Run the encode.py and make sure that all the images get encoded without errors
+Step 3:Make sure that the last line of output from the step 2 is "Encodings saved to face_encodings.pkl"
+Step 4:Run the recognise.py file for recognition and you should see the webcam view with recognition.
+
+
+
+
+intsalling database:
+
+https://www.youtube.com/watch?v=x7SwgcpACng&list=PLB5jA40tNf3tRMbTpBA0N7lfDZNLZAa9G
+
+pip install mysql-connector-python
+
+ALSO MAKE SURE YOU INSTALL MYSQL AND MSQL WORKBENCH AND INITIALIZE THE DATABASE DETAILS ACCORDINGLY
+
+
+
+RUN THE run_encode.py and run.py to execute

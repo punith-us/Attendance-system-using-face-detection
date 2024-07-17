@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            padding: 20px;
+            margin: 0;
+            background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?t=st=1721237162~exp=1721240762~hmac=0130907c75033c41049cba680e9ab0dc13727aba4364c35517714980304cbc49&w=1480');
+            background-size: cover;
+            background-position: center ;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            color:white;
+        }
+        .container h1{
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .container h2{
+            max-width: 1000px;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            margin: 10px;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            margin: 0;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .description {
+            padding: 20px;
+            max-width: 1000px;
+            margin-top: 20px;
+            left: 40px;
+            border-radius: 20px;
+             }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Welcome to Student Management System</h1>
+        <div>
+            <!--links to the other pages-->
+            <a href="{{ url_for('add_student') }}" class="btn btn-primary btn-lg">Student Registration</a>
+            <a href="{{ url_for('monitor') }}" class="btn btn-primary btn-lg">Monitor Attendance</a>
+            <a href="{{ url_for('attendance_details') }}" class="btn btn-primary btn-lg">Attendance Details</a>
+        </div>
+        <div class="description">
+            <h2>This website allows you to manage student registrations, monitor attendance by AI Face recognition, and view detailed attendance records.</h2>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js" integrity="sha384-Q6E9RHJCYuD99vRusOJdd7Fq8/+q5Lr8NUDv2P4D+I83pC9nvBb4B1+25brEWyZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+pyRPA620OWF8hCr7QjUG6s7SiO2JqjIzFe" crossorigin="anonymous"></script>
+
+    <footer class="footer">
+        @Developed by pus technologies 
+    </footer>
+</body>
+</html>

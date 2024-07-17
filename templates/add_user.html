@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="=en">
+    <head>
+        <meta charset="utf-8">
+        <meta name ="viewport" context = "width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>STUDENT REGISTRATION FORM</title>
+    </head>
+
+
+    <body>
+        <div> <!-- div is a container to group the content-->
+            <h1>student registration</h1>
+            <form method="post" enctype="multipart/form-data">
+            
+                <!--input fields :-->
+                <label for ="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="usn">USN:</label>
+                <input type="text" id="usn" name="usn" required><br><br>
+
+                <label for="file">Image (jpg and jpeg only):</label>
+                <input type="file" id="file" name="file" accept=".jpg, .jpeg" multiple required><br><br>
+                <button type="submit">submit</button>
+            </form>
+            {%with message = get_flashed_messages()%}
+                {%if messages %}
+                <ul>
+                    {%for message in messages%}
+                    <li>({message})</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            {% endwith %}
+
+        </div>
+    </body>
+</html>
+                
+
+
+             
+        
+    
+
+        </div>
+
+
+    </body>
+
+
+
+
+
+</html>
